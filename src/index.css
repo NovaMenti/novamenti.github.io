@@ -10,14 +10,14 @@
 
 @layer utilities {
   .glass-panel {
-    @apply bg-surface/40 backdrop-blur-[20px] border border-outline-variant/10 shadow-[0_24px_48px_-12px_rgba(0,218,248,0.08)];
+    @apply bg-surface-container-high/40 backdrop-blur-[20px] border border-outline-variant/15 shadow-[0_24px_48px_-12px_rgba(0,218,248,0.08)];
   }
 
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-br from-primary via-primary to-secondary;
+    @apply bg-clip-text text-transparent bg-gradient-to-br from-primary via-primary to-primary-container;
   }
 
   .bg-glow {
-    background: radial-gradient(circle at 50% 50%, rgba(0, 218, 248, 0.05) 0%, transparent 70%);
+    background: radial-gradient(circle at 50% 50%, rgba(0, 218, 248, 0.07) 0%, transparent 70%);
   }
 }

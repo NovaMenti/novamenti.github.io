@@ -19,8 +19,9 @@ const Nav = () => {
   return (
     <header className="sticky top-0 w-full z-50 bg-surface/40 backdrop-blur-[20px] shadow-[0_24px_48px_-12px_rgba(0,218,248,0.08)]">
       <div className="flex justify-between items-center px-8 h-20 max-w-7xl mx-auto font-headline text-sm font-medium tracking-wide">
-        <div className="text-xl font-extrabold tracking-tighter text-white uppercase">
-          NovaMenti
+        <div className="flex items-center gap-3 text-xl font-extrabold tracking-tighter text-white uppercase">
+          <img src="/logo.svg" alt="NovaMenti logo" className="w-9 h-9" />
+          <span>NovaMenti</span>
         </div>
         
         <nav className="hidden md:flex items-center gap-8">
@@ -30,7 +31,7 @@ const Nav = () => {
         </nav>
 
         <div className="flex items-center gap-6">
-          <button className="bg-gradient-to-br from-primary to-primary-container px-6 py-2.5 rounded-lg text-on-primary-container font-bold active:scale-[0.98] transition-transform duration-200">
+          <button className="bg-primary px-6 py-2.5 rounded-lg text-on-primary-container font-bold active:scale-[0.98] transition-transform duration-200">
             Contact us
           </button>
           <button className="md:hidden text-white" onClick={() => setIsOpen(!isOpen)}>
@@ -70,7 +71,7 @@ const Hero = () => (
           Transform your concepts into intelligent reality. We combine deep technical expertise with product-led thinking to build scalable AI applications that solve real-world problems.
         </p>
         <div className="flex flex-wrap gap-4">
-          <button className="bg-gradient-to-br from-primary to-primary-container px-8 py-4 rounded-lg text-on-primary-container font-bold text-lg active:scale-[0.98] transition-transform">
+          <button className="bg-primary px-8 py-4 rounded-lg text-on-primary-container font-bold text-lg active:scale-[0.98] transition-transform">
             Build Your Product
           </button>
           <button className="px-8 py-4 rounded-lg bg-surface-container-high border border-outline-variant/10 text-white font-bold text-lg hover:bg-surface-container-highest transition-colors active:scale-[0.98]">
@@ -153,7 +154,7 @@ const Services = () => {
           ))}
         </div>
         <div className="flex justify-center">
-          <button className="bg-gradient-to-br from-primary to-primary-container px-10 py-4 rounded-xl text-on-primary-container font-bold text-lg active:scale-[0.98] transition-transform">
+          <button className="bg-primary px-10 py-4 rounded-xl text-on-primary-container font-bold text-lg active:scale-[0.98] transition-transform">
             Get Started
           </button>
         </div>
@@ -207,10 +208,31 @@ const Consulting = () => (
 
 const Team = () => {
   const members = [
-    { name: "Alex Chen", role: "LLM Architect", desc: "Expert in transformer architectures and efficient model serving for high-scale applications." },
-    { name: "Sarah Jenkins", role: "Product Lead", desc: "Bridging user needs with AI capabilities to define intuitive, high-impact product experiences." },
-    { name: "David Miller", role: "Data Engineer", desc: "Specializing in RAG pipelines and vector database optimization for accurate AI retrieval." },
-    { name: "Elena Rodriguez", role: "AI Strategist", desc: "Advising on AI feasibility and ethics, ensuring technical roadmaps align with business goals." }
+    {
+      name: "Niklaus",
+      role: "LLM Architect",
+      desc: "Expert in transformer architectures and efficient model serving for high-scale applications.",
+      imageSrc: "/niklaus.jpg",
+    },
+    {
+      name: "Nyffenegger",
+      role: "Product Lead",
+      desc: "Bridging user needs with AI capabilities to define intuitive, high-impact product experiences.",
+      imageSrc: "/nyffenegger.png",
+    },
+    {
+      name: "Brugger",
+      role: "Data Engineer",
+      desc: "Specializing in RAG pipelines and vector database optimization for accurate AI retrieval.",
+      // Brugger image not added yet.
+      imageSrc: null,
+    },
+    {
+      name: "Birchler",
+      role: "AI Strategist",
+      desc: "Advising on AI feasibility and ethics, ensuring technical roadmaps align with business goals.",
+      imageSrc: "/birchler.jpg",
+    },
   ];
 
   return (
@@ -228,12 +250,20 @@ const Team = () => {
               className="group"
             >
               <div className="aspect-square bg-surface-container-high rounded-2xl mb-4 overflow-hidden relative">
-                <img 
-                  src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${m.name}`}
-                  alt={m.name}
-                  className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all"
-                  referrerPolicy="no-referrer"
-                />
+                {m.imageSrc ? (
+                  <img
+                    src={m.imageSrc}
+                    alt={m.name}
+                    className="w-full h-full object-cover transition-all"
+                    referrerPolicy="no-referrer"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center bg-surface-container-highest/40">
+                    <span className="text-white/70 font-headline text-5xl font-extrabold">
+                      {m.name.slice(0, 1)}
+                    </span>
+                  </div>
+                )}
               </div>
               <h4 className="font-bold text-white">{m.name}</h4>
               <p className="text-xs text-primary uppercase tracking-widest font-bold mb-2">{m.role}</p>
@@ -357,7 +387,7 @@ const Contact = () => (
             ></textarea>
           </div>
           <div className="flex justify-center pt-4">
-            <button className="bg-gradient-to-br from-primary to-primary-container px-12 py-4 rounded-xl text-on-primary-container font-bold text-lg active:scale-[0.95] transition-transform w-full md:w-auto flex items-center justify-center gap-2">
+            <button className="bg-primary px-12 py-4 rounded-xl text-on-primary-container font-bold text-lg active:scale-[0.95] transition-transform w-full md:w-auto flex items-center justify-center gap-2">
               Send <ArrowRight size={20} />
             </button>
           </div>

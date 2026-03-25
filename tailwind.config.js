@@ -9,27 +9,28 @@ module.exports = {
       },
       colors: {
         primary: '#00DAF8',
-        'primary-container': '#004F5C',
+        'primary-container': '#009fb5',
         'on-primary-container': '#B2EBFF',
 
         secondary: '#00D8B4',
         'secondary-container': '#005143',
 
-        tertiary: '#FFB4AB',
-        'tertiary-container': '#93000A',
+        tertiary: '#c0c1ff',
+        'tertiary-container': '#6d63ff',
 
-        surface: '#0B1416',
-        'surface-container': '#172123',
-        'surface-container-low': '#121B1D',
-        'surface-container-high': '#1D2729',
-        'surface-container-highest': '#283234',
-        'surface-container-lowest': '#060E10',
+        /* Slightly brighter variant of the Ethereal/Prism surfaces. */
+        surface: '#0f1733',
+        'surface-container': '#17223f',
+        'surface-container-low': '#18233e',
+        'surface-container-high': '#28324f',
+        'surface-container-highest': '#323a5d',
+        'surface-container-lowest': '#0a1328',
 
-        'on-surface': '#E0E3E3',
-        'on-surface-variant': '#BFC8CA',
+        'on-surface': '#e7ebff',
+        'on-surface-variant': '#c7d2fe',
 
-        outline: '#899294',
-        'outline-variant': '#3F484A',
+        outline: '#5a6a7a',
+        'outline-variant': '#414755',
       },
     },
   },

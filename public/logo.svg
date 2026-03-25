@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160" viewBox="0 0 160 160" fill="none" role="img" aria-label="NovaMenti logo">
+  <defs>
+    <linearGradient id="brandGrad" x1="36" y1="24" x2="124" y2="136" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00DAF8" />
+      <stop offset="1" stop-color="#009FB5" />
+    </linearGradient>
+    <filter id="softGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feColorMatrix
+        in="blur"
+        type="matrix"
+        values="
+          0 0 0 0 0
+          0 0 0 0 0.85
+          0 0 0 0 0.97
+          0 0 0 0 0.35 0"
+        result="glow"
+      />
+      <feMerge>
+        <feMergeNode in="glow" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Cognitive Prism mark -->
+  <g filter="url(#softGlow)">
+    <path
+      d="M80 16L124 40V112L80 136L36 112V40L80 16Z"
+      stroke="url(#brandGrad)"
+      stroke-width="4"
+      stroke-linejoin="round"
+      opacity="0.65"
+    />
+
+    <!-- Top facet -->
+    <path
+      d="M80 16L124 40L80 64L36 40L80 16Z"
+      fill="url(#brandGrad)"
+      opacity="0.14"
+      stroke="url(#brandGrad)"
+      stroke-width="3"
+      stroke-linejoin="round"
+    />
+
+    <!-- Left facet -->
+    <path
+      d="M36 40V112L80 136V64L36 40Z"
+      fill="url(#brandGrad)"
+      opacity="0.09"
+      stroke="url(#brandGrad)"
+      stroke-width="3"
+      stroke-linejoin="round"
+    />
+
+    <!-- Right facet -->
+    <path
+      d="M124 40V112L80 136V64L124 40Z"
+      fill="url(#brandGrad)"
+      opacity="0.09"
+      stroke="url(#brandGrad)"
+      stroke-width="3"
+      stroke-linejoin="round"
+    />
+
+    <!-- Internal data beam -->
+    <path
+      d="M56 74L80 62L104 74"
+      stroke="url(#brandGrad)"
+      stroke-width="3"
+      stroke-linecap="round"
+      opacity="0.8"
+    />
+    <circle cx="80" cy="62" r="5" fill="url(#brandGrad)" opacity="0.75" />
+  </g>
+</svg>
+
