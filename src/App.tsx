@@ -21,7 +21,9 @@ const Nav = () => {
       <div className="flex justify-between items-center px-8 h-20 max-w-7xl mx-auto font-headline text-sm font-medium tracking-wide">
         <div className="flex items-center gap-3 text-xl font-extrabold tracking-tighter text-white uppercase">
           <img src="/logo.svg" alt="NovaMenti logo" className="w-9 h-9" />
-          <span>NovaMenti</span>
+            <span>
+              NovaMenti
+            </span>
         </div>
         
         <nav className="hidden md:flex items-center gap-8">
@@ -85,13 +87,59 @@ const Hero = () => (
         transition={{ duration: 1 }}
         className="relative"
       >
-        <div className="glass-panel p-2 rounded-2xl relative z-10">
-          <img 
-            src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1000" 
-            alt="AI Visualization" 
-            className="rounded-xl w-full shadow-2xl"
-            referrerPolicy="no-referrer"
-          />
+        <div className="glass-panel p-6 rounded-2xl relative z-10">
+          <div className="mb-4">
+            <h3 className="font-headline text-2xl font-extrabold text-white leading-tight">
+              Fast proof of concept, reliable delivery
+            </h3>
+          </div>
+
+          <div className="grid gap-3">
+            <div className="group rounded-xl border border-outline-variant/10 bg-surface-container-high/30 p-4 transition-colors hover:bg-surface-container-highest/40">
+              <div className="flex items-start gap-3">
+                <CheckCircle2 size={18} className="text-primary mt-0.5" />
+                <div>
+                      <p className="text-white font-bold">Fast proof of concept</p>
+                  <p className="text-sm text-on-surface-variant mt-1">Fast validation with your real data.</p>
+                </div>
+              </div>
+              <div className="mt-3 overflow-hidden max-h-0 opacity-0 group-hover:max-h-28 group-hover:opacity-100 transition-all duration-300">
+                <p className="text-sm text-on-surface-variant leading-relaxed">
+                  We align on success criteria early, iterate quickly, and deliver a testable proof of concept you can evaluate and extend.
+                </p>
+              </div>
+            </div>
+
+            <div className="group rounded-xl border border-outline-variant/10 bg-surface-container-high/30 p-4 transition-colors hover:bg-surface-container-highest/40">
+              <div className="flex items-start gap-3">
+                <CheckCircle2 size={18} className="text-primary mt-0.5" />
+                <div>
+                      <p className="text-white font-bold">Reliable retrieval + evaluation</p>
+                      <p className="text-sm text-on-surface-variant mt-1">Grounded answers with measurable quality.</p>
+                </div>
+              </div>
+              <div className="mt-3 overflow-hidden max-h-0 opacity-0 group-hover:max-h-28 group-hover:opacity-100 transition-all duration-300">
+                <p className="text-sm text-on-surface-variant leading-relaxed">
+                  Retrieval tuned to your content, plus evaluation and guardrails so the system stays grounded as it evolves.
+                </p>
+              </div>
+            </div>
+
+            <div className="group rounded-xl border border-outline-variant/10 bg-surface-container-high/30 p-4 transition-colors hover:bg-surface-container-highest/40">
+                  <div className="flex items-start gap-3">
+                <CheckCircle2 size={18} className="text-primary mt-0.5" />
+                <div>
+                      <p className="text-white font-bold">Reliable products</p>
+                  <p className="text-sm text-on-surface-variant mt-1">Pipelines, monitoring, and dependable behavior.</p>
+                </div>
+              </div>
+              <div className="mt-3 overflow-hidden max-h-0 opacity-0 group-hover:max-h-28 group-hover:opacity-100 transition-all duration-300">
+                <p className="text-sm text-on-surface-variant leading-relaxed">
+                  We harden the system toward rollout readiness with robust ingestion, monitoring, and iterative quality improvements.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="absolute -top-12 -right-12 w-64 h-64 bg-primary/10 blur-[100px] rounded-full"></div>
         <div className="absolute -bottom-12 -left-12 w-64 h-64 bg-tertiary/10 blur-[100px] rounded-full"></div>
@@ -109,8 +157,8 @@ const Services = () => {
       color: "bg-primary/10"
     },
     {
-      title: "LLM Pipelines",
-      desc: "Robust architectures for data processing, prompt engineering, and model orchestration. Ensuring reliability and consistency in your AI workflows.",
+      title: "Data & AI Pipelines",
+      desc: "Robust architectures for data processing, prompt engineering, and model orchestration. Ensuring reliability and consistency in your data driven workflows.",
       icon: <GitBranch className="text-tertiary" />,
       color: "bg-tertiary/10"
     },
@@ -133,9 +181,11 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-8">
         <div className="mb-20 max-w-3xl">
           <h2 className="font-headline text-xs uppercase tracking-[0.2em] text-primary mb-4">Our Services</h2>
-          <h3 className="font-headline text-4xl md:text-5xl font-extrabold text-white mb-6">From Idea to Production.</h3>
+          <h3 className="font-headline text-4xl md:text-5xl font-extrabold text-white mb-6">See your idea become reality</h3>
           <p className="text-lg text-on-surface-variant leading-relaxed">
-            Have a revolutionary AI concept but lack the technical infrastructure to realize it? We bridge that gap. Hire us to rapidly validate your ideas and build a functional prototype in just a few days, at a fraction of the traditional cost.
+            Have a revolutionary AI concept but lack the technical infrastructure to realize it?<br />
+            Trying to find information in your data but don't know where to start?<br />
+            Let us build your idea into a functional prototype in just a few days, at a fraction of the traditional cost.
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
@@ -169,7 +219,7 @@ const Consulting = () => (
       <div className="grid md:grid-cols-2 gap-20 items-center">
         <div>
           <h2 className="font-headline text-xs uppercase tracking-[0.2em] text-primary mb-4">Strategic Guidance</h2>
-          <h3 className="font-headline text-4xl md:text-5xl font-extrabold text-white mb-8">Consulting & Workshops.</h3>
+          <h3 className="font-headline text-4xl md:text-5xl font-extrabold text-white mb-8">Consulting & Workshops</h3>
           <p className="text-lg text-on-surface-variant mb-8 leading-relaxed">
             Navigate the complex AI landscape with confidence. We provide the strategic know-how to integrate LLMs effectively into your organizational fabric.
           </p>
@@ -209,28 +259,32 @@ const Consulting = () => (
 const Team = () => {
   const members = [
     {
-      name: "Niklaus",
-      role: "LLM Architect",
-      desc: "Expert in transformer architectures and efficient model serving for high-scale applications.",
+      name: "Dr. Joel Niklaus",
+      role: "CEO",
+      degrees: "PhD, Computer Science",
+      desc: "Strategy and delivery focus: turning AI roadmaps into practical products, partnerships, and measurable outcomes.",
       imageSrc: "/niklaus.jpg",
     },
     {
-      name: "Nyffenegger",
-      role: "Product Lead",
-      desc: "Bridging user needs with AI capabilities to define intuitive, high-impact product experiences.",
+      name: "Alex Nyffenegger",
+      role: "AI engineer",
+      degrees: "MSc Computer Science",
+      desc: "Technical leadership across LLM systems: architecture, evaluation, reliability, and production-ready engineering.",
       imageSrc: "/nyffenegger.png",
     },
     {
-      name: "Brugger",
-      role: "Data Engineer",
-      desc: "Specializing in RAG pipelines and vector database optimization for accurate AI retrieval.",
+      name: "Tobias Brugger",
+      role: "AI engineer",
+      degrees: "Cand. Msc Computer Science",
+      desc: "Applied ML engineering: data pipelines, retrieval systems (RAG), and scalable LLM features from raw inputs to production.",
       // Brugger image not added yet.
       imageSrc: null,
     },
     {
-      name: "Birchler",
-      role: "AI Strategist",
-      desc: "Advising on AI feasibility and ethics, ensuring technical roadmaps align with business goals.",
+      name: "Dr. Christian Birchler",
+      role: "AI specialist",
+      degrees: "PhD, Computer Science",
+      desc: "Specialist in model evaluation and safe, grounded AI assistants—especially for structured and unstructured knowledge.",
       imageSrc: "/birchler.jpg",
     },
   ];
@@ -254,7 +308,7 @@ const Team = () => {
                   <img
                     src={m.imageSrc}
                     alt={m.name}
-                    className="w-full h-full object-cover transition-all"
+                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all"
                     referrerPolicy="no-referrer"
                   />
                 ) : (
@@ -267,6 +321,9 @@ const Team = () => {
               </div>
               <h4 className="font-bold text-white">{m.name}</h4>
               <p className="text-xs text-primary uppercase tracking-widest font-bold mb-2">{m.role}</p>
+              {m.degrees ? (
+                <p className="text-xs text-on-surface-variant leading-relaxed px-4 mb-3">{m.degrees}</p>
+              ) : null}
               <p className="text-xs text-on-surface-variant leading-relaxed px-4">{m.desc}</p>
             </motion.div>
           ))}
