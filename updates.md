@@ -7,7 +7,6 @@
 - change the order of "from idea to production": first prototyping card, then LLM pipelines, then the bots card and last the development.
 - logo for AI product prototyping has a darker color than the others, should be the same.
 - need a company logo
-- need a favicon
 - make the contact form actually work
 - add team photos.
 - check all the text, optimize and iterate it.

@@ -31,7 +31,7 @@ const Nav = () => {
         </nav>
 
         <div className="flex items-center gap-6">
-          <button className="bg-primary px-6 py-2.5 rounded-lg text-on-primary-container font-bold active:scale-[0.98] transition-transform duration-200">
+          <button className="bg-primary/85 px-6 py-2.5 rounded-lg text-on-primary-container font-bold active:scale-[0.98] transition-transform duration-200">
             Contact us
           </button>
           <button className="md:hidden text-white" onClick={() => setIsOpen(!isOpen)}>
@@ -154,7 +154,7 @@ const Services = () => {
           ))}
         </div>
         <div className="flex justify-center">
-          <button className="bg-primary px-10 py-4 rounded-xl text-on-primary-container font-bold text-lg active:scale-[0.98] transition-transform">
+          <button className="bg-primary/85 px-10 py-4 rounded-xl text-on-primary-container font-bold text-lg active:scale-[0.98] transition-transform">
             Get Started
           </button>
         </div>
@@ -287,7 +287,7 @@ const Process = () => (
       <div className="relative max-w-5xl mx-auto">
         <div className="absolute left-1/2 -translate-x-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-primary/0 via-primary/40 to-primary/0 hidden md:block"></div>
         
-        <div className="space-y-12">
+        <div className="space-y-12 md:space-y-0">
           {/* Step 1 */}
           <div className="relative flex flex-col md:flex-row items-center">
             <div className="w-full md:w-1/2 md:pr-12 md:text-right">
@@ -297,9 +297,9 @@ const Process = () => (
                 <p className="text-primary text-sm font-bold mb-6">AI Workshop</p>
                 <p className="text-on-surface-variant text-sm mb-6">Align your team on the possibilities of LLMs and identify the most impactful use cases for your business.</p>
                 <ul className="space-y-4">
-                  <li className="text-sm text-on-surface flex md:flex-row-reverse md:justify-end gap-2"><CheckCircle2 size={16} className="text-primary" /> Tech Stack Audit</li>
-                  <li className="text-sm text-on-surface flex md:flex-row-reverse md:justify-end gap-2"><CheckCircle2 size={16} className="text-primary" /> Use-case Prioritization</li>
-                  <li className="text-sm text-on-surface flex md:flex-row-reverse md:justify-end gap-2"><CheckCircle2 size={16} className="text-primary" /> Implementation Roadmap</li>
+                  <li className="text-sm text-white flex gap-2"><CheckCircle2 size={16} className="text-primary" /> Tech Stack Audit</li>
+                  <li className="text-sm text-white flex gap-2"><CheckCircle2 size={16} className="text-primary" /> Use-case Prioritization</li>
+                  <li className="text-sm text-white flex gap-2"><CheckCircle2 size={16} className="text-primary" /> Implementation Roadmap</li>
                 </ul>
               </div>
             </div>
@@ -308,11 +308,11 @@ const Process = () => (
           </div>
 
           {/* Step 2 */}
-          <div className="relative flex flex-col md:flex-row items-center">
+          <div className="relative z-10 flex flex-col md:flex-row items-center md:-mt-20">
             <div className="w-full md:w-1/2 md:pr-12"></div>
             <div className="hidden md:flex absolute left-1/2 -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-surface shadow-[0_0_15px_rgba(0,218,248,0.5)] z-10"></div>
             <div className="w-full md:w-1/2 md:pl-12">
-              <div className="p-8 rounded-2xl bg-surface-container-high relative overflow-hidden flex flex-col shadow-2xl border border-primary/20 w-full">
+              <div className="p-8 rounded-2xl bg-surface-container-high relative overflow-hidden flex flex-col shadow-2xl border border-primary/20 w-full z-20">
                 <p className="text-xs font-label uppercase tracking-widest text-primary mb-2">Step 2</p>
                 <h4 className="text-3xl font-headline font-extrabold text-white mb-2">Validation</h4>
                 <p className="text-primary text-sm font-bold mb-6">AI Prototype</p>
@@ -328,7 +328,7 @@ const Process = () => (
           </div>
 
           {/* Step 3 */}
-          <div className="relative flex flex-col md:flex-row items-center">
+          <div className="relative flex flex-col md:flex-row items-center md:mt-6">
             <div className="w-full md:w-1/2 md:pr-12 md:text-right">
               <div className="p-8 rounded-2xl bg-surface-container-low border border-outline-variant/10 inline-block text-left w-full">
                 <p className="text-xs font-label uppercase tracking-widest text-primary-container mb-2">Step 3</p>
@@ -336,9 +336,9 @@ const Process = () => (
                 <p className="text-primary text-sm font-bold mb-6">Full Build</p>
                 <p className="text-on-surface-variant text-sm mb-6">End-to-end engineering of production-ready applications designed for enterprise-grade scalability.</p>
                 <ul className="space-y-4">
-                  <li className="text-sm text-on-surface flex md:flex-row-reverse md:justify-end gap-2"><CheckCircle2 size={16} className="text-primary" /> Production Scalability</li>
-                  <li className="text-sm text-on-surface flex md:flex-row-reverse md:justify-end gap-2"><CheckCircle2 size={16} className="text-primary" /> Custom API Development</li>
-                  <li className="text-sm text-on-surface flex md:flex-row-reverse md:justify-end gap-2"><CheckCircle2 size={16} className="text-primary" /> Security & Compliance</li>
+                  <li className="text-sm text-white flex gap-2"><CheckCircle2 size={16} className="text-primary" /> Production Scalability</li>
+                  <li className="text-sm text-white flex gap-2"><CheckCircle2 size={16} className="text-primary" /> Custom API Development</li>
+                  <li className="text-sm text-white flex gap-2"><CheckCircle2 size={16} className="text-primary" /> Security & Compliance</li>
                 </ul>
               </div>
             </div>
@@ -387,7 +387,7 @@ const Contact = () => (
             ></textarea>
           </div>
           <div className="flex justify-center pt-4">
-            <button className="bg-primary px-12 py-4 rounded-xl text-on-primary-container font-bold text-lg active:scale-[0.95] transition-transform w-full md:w-auto flex items-center justify-center gap-2">
+            <button className="bg-primary/85 px-12 py-4 rounded-xl text-on-primary-container font-bold text-lg active:scale-[0.95] transition-transform w-full md:w-auto flex items-center justify-center gap-2">
               Send <ArrowRight size={20} />
             </button>
           </div>
