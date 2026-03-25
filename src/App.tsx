@@ -33,9 +33,12 @@ const Nav = () => {
         </nav>
 
         <div className="flex items-center gap-6">
-          <button className="bg-primary/85 px-6 py-2.5 rounded-lg text-on-primary-container font-bold active:scale-[0.98] transition-transform duration-200">
+          <a
+            href="#contact"
+            className="bg-primary/85 px-6 py-2.5 rounded-lg text-on-primary-container font-bold active:scale-[0.98] transition-transform duration-200"
+          >
             Contact us
-          </button>
+          </a>
           <button className="md:hidden text-white" onClick={() => setIsOpen(!isOpen)}>
             {isOpen ? <X /> : <Menu />}
           </button>
@@ -51,6 +54,7 @@ const Nav = () => {
           <a href="#services" onClick={() => setIsOpen(false)} className="text-on-surface-variant hover:text-white">Services</a>
           <a href="#consulting" onClick={() => setIsOpen(false)} className="text-on-surface-variant hover:text-white">Consulting</a>
           <a href="#team" onClick={() => setIsOpen(false)} className="text-on-surface-variant hover:text-white">Team</a>
+          <a href="#contact" onClick={() => setIsOpen(false)} className="text-on-surface-variant hover:text-white">Contact</a>
         </motion.div>
       )}
     </header>
@@ -60,7 +64,7 @@ const Nav = () => {
 const Hero = () => (
   <section className="relative min-h-[800px] flex items-center pt-20 overflow-hidden">
     <div className="absolute inset-0 z-0 bg-glow pointer-events-none"></div>
-    <div className="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-12 items-center relative z-10">
+    <div className="max-w-7xl mx-auto px-8 grid md:grid-cols-1 gap-12 items-center relative z-10">
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
@@ -73,77 +77,21 @@ const Hero = () => (
           Transform your concepts into intelligent reality. We combine deep technical expertise with product-led thinking to build scalable AI applications that solve real-world problems.
         </p>
         <div className="flex flex-wrap gap-4">
-          <button className="bg-primary px-8 py-4 rounded-lg text-on-primary-container font-bold text-lg active:scale-[0.98] transition-transform">
-            Build Your Product
-          </button>
-          <button className="px-8 py-4 rounded-lg bg-surface-container-high border border-outline-variant/10 text-white font-bold text-lg hover:bg-surface-container-highest transition-colors active:scale-[0.98]">
+          <a
+            href="#contact"
+            className="bg-primary px-8 py-4 rounded-lg text-on-primary-container font-bold text-lg active:scale-[0.98] transition-transform"
+          >
+            Let’s talk
+          </a>
+          <a
+            href="#consulting"
+            className="px-8 py-4 rounded-lg bg-surface-container-high border border-outline-variant/10 text-white font-bold text-lg hover:bg-surface-container-highest transition-colors active:scale-[0.98]"
+          >
             Book a Workshop
-          </button>
+          </a>
         </div>
       </motion.div>
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 1 }}
-        className="relative"
-      >
-        <div className="glass-panel p-6 rounded-2xl relative z-10">
-          <div className="mb-4">
-            <h3 className="font-headline text-2xl font-extrabold text-white leading-tight">
-              Fast proof of concept, reliable delivery
-            </h3>
-          </div>
-
-          <div className="grid gap-3">
-            <div className="group rounded-xl border border-outline-variant/10 bg-surface-container-high/30 p-4 transition-colors hover:bg-surface-container-highest/40">
-              <div className="flex items-start gap-3">
-                <CheckCircle2 size={18} className="text-primary mt-0.5" />
-                <div>
-                      <p className="text-white font-bold">Fast proof of concept</p>
-                  <p className="text-sm text-on-surface-variant mt-1">Fast validation with your real data.</p>
-                </div>
-              </div>
-              <div className="mt-3 overflow-hidden max-h-0 opacity-0 group-hover:max-h-28 group-hover:opacity-100 transition-all duration-300">
-                <p className="text-sm text-on-surface-variant leading-relaxed">
-                  We align on success criteria early, iterate quickly, and deliver a testable proof of concept you can evaluate and extend.
-                </p>
-              </div>
-            </div>
-
-            <div className="group rounded-xl border border-outline-variant/10 bg-surface-container-high/30 p-4 transition-colors hover:bg-surface-container-highest/40">
-              <div className="flex items-start gap-3">
-                <CheckCircle2 size={18} className="text-primary mt-0.5" />
-                <div>
-                      <p className="text-white font-bold">Reliable retrieval + evaluation</p>
-                      <p className="text-sm text-on-surface-variant mt-1">Grounded answers with measurable quality.</p>
-                </div>
-              </div>
-              <div className="mt-3 overflow-hidden max-h-0 opacity-0 group-hover:max-h-28 group-hover:opacity-100 transition-all duration-300">
-                <p className="text-sm text-on-surface-variant leading-relaxed">
-                  Retrieval tuned to your content, plus evaluation and guardrails so the system stays grounded as it evolves.
-                </p>
-              </div>
-            </div>
-
-            <div className="group rounded-xl border border-outline-variant/10 bg-surface-container-high/30 p-4 transition-colors hover:bg-surface-container-highest/40">
-                  <div className="flex items-start gap-3">
-                <CheckCircle2 size={18} className="text-primary mt-0.5" />
-                <div>
-                      <p className="text-white font-bold">Reliable products</p>
-                  <p className="text-sm text-on-surface-variant mt-1">Pipelines, monitoring, and dependable behavior.</p>
-                </div>
-              </div>
-              <div className="mt-3 overflow-hidden max-h-0 opacity-0 group-hover:max-h-28 group-hover:opacity-100 transition-all duration-300">
-                <p className="text-sm text-on-surface-variant leading-relaxed">
-                  We harden the system toward rollout readiness with robust ingestion, monitoring, and iterative quality improvements.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="absolute -top-12 -right-12 w-64 h-64 bg-primary/10 blur-[100px] rounded-full"></div>
-        <div className="absolute -bottom-12 -left-12 w-64 h-64 bg-tertiary/10 blur-[100px] rounded-full"></div>
-      </motion.div>
+      
     </div>
   </section>
 );
@@ -204,9 +152,12 @@ const Services = () => {
           ))}
         </div>
         <div className="flex justify-center">
-          <button className="bg-primary/85 px-10 py-4 rounded-xl text-on-primary-container font-bold text-lg active:scale-[0.98] transition-transform">
+          <a
+            href="#contact"
+            className="bg-primary/85 px-10 py-4 rounded-xl text-on-primary-container font-bold text-lg active:scale-[0.98] transition-transform"
+          >
             Get Started
-          </button>
+          </a>
         </div>
       </div>
     </section>
@@ -409,18 +360,42 @@ const Process = () => (
 );
 
 const Contact = () => (
-  <section className="py-24 max-w-7xl mx-auto px-8">
+  <section id="contact" className="py-24 max-w-7xl mx-auto px-8">
     <div className="glass-panel p-10 md:p-16 rounded-[2rem] relative overflow-hidden">
       <div className="absolute inset-0 bg-primary/5 pointer-events-none"></div>
       <div className="max-w-3xl mx-auto relative z-10">
         <h2 className="font-headline text-4xl md:text-5xl font-extrabold text-white mb-10 text-center">Ready to build your <span className="text-gradient">AI Product</span>?</h2>
-        <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+        <form
+          className="space-y-6"
+          onSubmit={(e) => {
+            e.preventDefault();
+
+            const form = e.currentTarget;
+            const name = (form.elements.namedItem("name") as HTMLInputElement | null)?.value?.trim() ?? "";
+            const org = (form.elements.namedItem("org") as HTMLInputElement | null)?.value?.trim() ?? "";
+            const message = (form.elements.namedItem("message") as HTMLTextAreaElement | null)?.value?.trim() ?? "";
+
+            const CONTACT_EMAIL = "hello@novamenti.ai";
+
+            const subject = `Project inquiry - NovaMenti${org ? ` (${org})` : ""}`;
+            const body = [
+              `Name: ${name || "-"}`,
+              `Organization: ${org || "-"}`,
+              "",
+              message || "-",
+            ].join("\n");
+
+            // GitHub Pages is static: this opens the user's email client.
+            window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+          }}
+        >
           <div className="grid md:grid-cols-2 gap-6">
             <div className="space-y-2">
               <label className="text-sm font-medium text-on-surface-variant ml-1" htmlFor="name">Name</label>
               <input 
                 className="w-full bg-surface-container-lowest border border-outline-variant/20 rounded-xl px-4 py-3 text-white placeholder:text-slate-600 focus:outline-none focus:border-primary/50 transition-colors" 
                 id="name" 
+                name="name"
                 placeholder="John Doe" 
                 type="text" 
               />
@@ -430,6 +405,7 @@ const Contact = () => (
               <input 
                 className="w-full bg-surface-container-lowest border border-outline-variant/20 rounded-xl px-4 py-3 text-white placeholder:text-slate-600 focus:outline-none focus:border-primary/50 transition-colors" 
                 id="org" 
+                name="org"
                 placeholder="Company Inc." 
                 type="text" 
               />
@@ -440,6 +416,7 @@ const Contact = () => (
             <textarea 
               className="w-full bg-surface-container-lowest border border-outline-variant/20 rounded-xl px-4 py-3 text-white placeholder:text-slate-600 focus:outline-none focus:border-primary/50 transition-colors min-h-[120px]" 
               id="message" 
+              name="message"
               placeholder="Describe your vision..."
             ></textarea>
           </div>
