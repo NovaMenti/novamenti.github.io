@@ -18,19 +18,19 @@ module.exports = {
         tertiary: '#c0c1ff',
         'tertiary-container': '#6d63ff',
 
-        /* Slightly brighter variant of the Ethereal/Prism surfaces. */
-        surface: '#0f1733',
-        'surface-container': '#17223f',
-        'surface-container-low': '#18233e',
-        'surface-container-high': '#28324f',
-        'surface-container-highest': '#323a5d',
-        'surface-container-lowest': '#0a1328',
+        /* Brighter variant: less “void black”, more readable corporate blue. */
+        surface: '#131d38',
+        'surface-container': '#1a2750',
+        'surface-container-low': '#1f2d58',
+        'surface-container-high': '#2a3a6d',
+        'surface-container-highest': '#344679',
+        'surface-container-lowest': '#0e1631',
 
-        'on-surface': '#e7ebff',
-        'on-surface-variant': '#c7d2fe',
+        'on-surface': '#f1f5ff',
+        'on-surface-variant': '#dbe5ff',
 
-        outline: '#5a6a7a',
-        'outline-variant': '#414755',
+        outline: '#7b879a',
+        'outline-variant': '#5b6b85',
       },
     },
   },
