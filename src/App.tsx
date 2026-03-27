@@ -19,11 +19,8 @@ const Nav = () => {
   return (
     <header className="sticky top-0 w-full z-50 bg-surface/40 backdrop-blur-[20px] shadow-[0_24px_48px_-12px_rgba(0,218,248,0.08)]">
       <div className="flex justify-between items-center px-8 h-20 max-w-7xl mx-auto font-headline text-sm font-medium tracking-wide">
-        <div className="flex items-center gap-3 text-xl font-extrabold tracking-tighter text-white uppercase">
-          <img src="/logo.svg" alt="NovaMenti logo" className="w-9 h-9" />
-            <span>
-              NovaMenti
-            </span>
+        <div className="flex items-center">
+          <img src="/logo-name.svg" alt="NovaMenti" className="h-8 w-auto md:h-9" />
         </div>
         
         <nav className="hidden md:flex items-center gap-8">
