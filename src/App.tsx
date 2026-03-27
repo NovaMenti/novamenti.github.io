@@ -35,7 +35,7 @@ const Nav = () => {
         <div className="flex items-center gap-6">
           <a
             href="#contact"
-            className="bg-primary/85 px-6 py-2.5 rounded-lg text-on-primary-container font-bold active:scale-[0.98] transition-transform duration-200"
+            className="bg-primary/65 px-6 py-2.5 rounded-lg text-white font-bold active:scale-[0.98] transition-transform duration-200"
           >
             Contact us
           </a>
@@ -71,7 +71,7 @@ const Hero = () => (
         transition={{ duration: 0.8 }}
       >
         <h1 className="font-headline text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-8 leading-[1.1]">
-          Building the Next Generation of <span className="text-gradient">LLM-Powered</span> Products
+          Building the Next Generation of <span className="text-gradient">AI-Powered</span> Products
         </h1>
         <p className="text-lg text-on-surface-variant mb-10 max-w-lg leading-relaxed">
           Transform your concepts into intelligent reality. We combine deep technical expertise with product-led thinking to build scalable AI applications that solve real-world problems.
@@ -79,7 +79,7 @@ const Hero = () => (
         <div className="flex flex-wrap gap-4">
           <a
             href="#contact"
-            className="bg-primary px-8 py-4 rounded-lg text-on-primary-container font-bold text-lg active:scale-[0.98] transition-transform"
+            className="bg-primary/70 px-8 py-4 rounded-lg text-white font-bold text-lg active:scale-[0.98] transition-transform"
           >
             Let’s talk
           </a>
@@ -288,7 +288,7 @@ const Process = () => (
   <section className="py-32" id="pricing">
     <div className="max-w-7xl mx-auto px-8">
       <div className="text-center mb-16">
-        <h2 className="font-headline text-4xl md:text-5xl font-extrabold text-white mb-4">How to Work With Us</h2>
+        <h2 className="font-headline text-4xl md:text-5xl font-extrabold text-white mb-4">Let's work together</h2>
         <p className="text-on-surface-variant">A proven three-step process to take you from initial idea to a scaled production environment.</p>
       </div>
       
@@ -302,7 +302,7 @@ const Process = () => (
               <div className="p-8 rounded-2xl bg-surface-container-low border border-outline-variant/10 inline-block text-left w-full">
                 <p className="text-xs font-label uppercase tracking-widest text-primary-container mb-2">Step 1</p>
                 <h4 className="text-3xl font-headline font-extrabold text-white mb-2">Strategy</h4>
-                <p className="text-primary text-sm font-bold mb-6">AI Workshop</p>
+                <p className="text-primary text-sm font-bold mb-6">Workshop</p>
                 <p className="text-on-surface-variant text-sm mb-6">Align your team on the possibilities of LLMs and identify the most impactful use cases for your business.</p>
                 <ul className="space-y-4">
                   <li className="text-sm text-white flex gap-2"><CheckCircle2 size={16} className="text-primary" /> Tech Stack Audit</li>
@@ -324,7 +324,7 @@ const Process = () => (
                 <p className="text-xs font-label uppercase tracking-widest text-primary mb-2">Step 2</p>
                 <h4 className="text-3xl font-headline font-extrabold text-white mb-2">Validation</h4>
                 <p className="text-primary text-sm font-bold mb-6">AI Prototype</p>
-                <p className="text-on-surface-variant text-sm mb-6">Go from concept to a functional LLM-powered proof of concept in 4-6 weeks to validate feasibility.</p>
+                <p className="text-on-surface-variant text-sm mb-6">Go from concept to a functional AI-powered proof of concept in 4-6 weeks to validate feasibility.</p>
                 <ul className="space-y-4">
                   <li className="text-sm text-white flex gap-2"><CheckCircle2 size={16} className="text-primary" /> Core LLM Integration</li>
                   <li className="text-sm text-white flex gap-2"><CheckCircle2 size={16} className="text-primary" /> UX/UI Interface</li>
