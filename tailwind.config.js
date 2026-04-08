@@ -8,29 +8,29 @@ module.exports = {
         body: ['Inter', 'sans-serif'],
       },
       colors: {
-        primary: '#00DAF8',
-        'primary-container': '#009fb5',
-        'on-primary-container': '#B2EBFF',
+        primary: '#2563eb',
+        'primary-container': '#1d4ed8',
+        'on-primary-container': '#ffffff',
 
-        secondary: '#00D8B4',
-        'secondary-container': '#005143',
+        secondary: '#38bdf8',
+        'secondary-container': '#0284c7',
 
-        tertiary: '#c0c1ff',
-        'tertiary-container': '#6d63ff',
+        tertiary: '#60a5fa',
+        'tertiary-container': '#1e3a8a',
 
-        /* Brighter variant: less “void black”, more readable corporate blue. */
-        surface: '#131d38',
-        'surface-container': '#1a2750',
-        'surface-container-low': '#1f2d58',
-        'surface-container-high': '#2a3a6d',
-        'surface-container-highest': '#344679',
-        'surface-container-lowest': '#0e1631',
+        /* Bright variant, toned down: softer neutral-light blue surfaces. */
+        surface: '#f8fafc',
+        'surface-container': '#f3f6fb',
+        'surface-container-low': '#eef2f7',
+        'surface-container-high': '#e8edf4',
+        'surface-container-highest': '#e2e8f0',
+        'surface-container-lowest': '#ffffff',
 
-        'on-surface': '#f1f5ff',
-        'on-surface-variant': '#dbe5ff',
+        'on-surface': '#0f172a',
+        'on-surface-variant': '#334155',
 
-        outline: '#7b879a',
-        'outline-variant': '#5b6b85',
+        outline: '#94a3b8',
+        'outline-variant': '#cbd5e1',
       },
     },
   },

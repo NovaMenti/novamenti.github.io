@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 293.46 109.22">
+  <defs>
+    <style>
+      .cls-1 {
+        letter-spacing: -.02em;
+      }
+
+      .cls-2 {
+        letter-spacing: -.07em;
+      }
+
+      .cls-3 {
+        letter-spacing: -.06em;
+      }
+
+      .cls-3, .cls-4, .cls-5, .cls-6 {
+        fill: #231f20;
+      }
+
+      .cls-3, .cls-5 {
+        font-size: 96px;
+      }
+
+      .cls-3, .cls-5, .cls-6 {
+        font-family: TimesNewRomanPSMT, 'Times New Roman';
+      }
+
+      .cls-4 {
+        stroke-width: 0px;
+      }
+
+      .cls-6 {
+        font-size: 48px;
+      }
+
+      .cls-7 {
+        letter-spacing: -.05em;
+      }
+    </style>
+  </defs>
+  <text class="cls-6" transform="translate(.64 53.19)"><tspan class="cls-7" x="0" y="0">NO</tspan><tspan class="cls-2" x="64.53" y="0">V</tspan></text>
+  <text class="cls-3" transform="translate(77.35 79.78)"><tspan x="0" y="0">A</tspan></text>
+  <text class="cls-5" transform="translate(261.49 79.78)"><tspan x="0" y="0">I</tspan></text>
+  <text class="cls-6" transform="translate(132.48 53.2)"><tspan x="0" y="0">MEN</tspan><tspan class="cls-1" x="106.66" y="0">T</tspan></text>
+  <path class="cls-4" d="M2.14,57.23c22.7,0,45.39,0,68.09,0,6.45,0,12.91,0,19.36,0,.8,0,.81-1.25,0-1.25-22.7,0-45.39,0-68.09,0-6.45,0-12.91,0-19.36,0-.8,0-.81,1.25,0,1.25h0Z"/>
+  <path class="cls-4" d="M133.2,57.61c16.55,0,33.1-.11,49.64-.25,16.6-.14,33.2-.31,49.79-.41,9.36-.06,18.72-.09,28.08-.09.8,0,.81-1.25,0-1.25-16.55,0-33.1.11-49.64.25-16.6.14-33.2.31-49.79.41-9.36.06-18.72.09-28.08.09-.8,0-.81,1.25,0,1.25h0Z"/>
+</svg>
