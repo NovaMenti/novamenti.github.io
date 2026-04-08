@@ -106,13 +106,13 @@ const Services = () => {
     },
     {
       title: "AI Product Prototyping",
-      desc: "Rapid development from concept to functional LLM MVP. Validate your AI product vision in weeks, not months.",
+      desc: "Rapid development from concept to functional proof of concept. Validate your AI product vision in weeks, not months.",
       icon: <Zap className="text-primary-container" />,
       color: "bg-primary-container/10"
     },
     {
       title: "Full Product Development",
-      desc: "Engineering scalable, production-ready AI applications. We handle the full stack, from backend model integration to polished user interfaces.",
+      desc: "Engineering scalable, production-ready AI applications. We handle the full stack, from training your AI models to polished user interfaces.",
       icon: <Layers className="text-on-surface-variant" />,
       color: "bg-surface-container-high/50"
     }
@@ -197,7 +197,7 @@ const Consulting = () => (
         </div>
       </div>
 
-      <div className="flex justify-center mt-10">
+      <div className="flex justify-center mt-14">
         <a
           href="#contact"
           className="bg-primary/85 px-12 py-4 rounded-xl text-on-primary-container font-bold text-lg hover:bg-primary active:scale-[0.98] transition-colors"
@@ -369,43 +369,26 @@ const Contact = () => (
         <h2 className="font-headline text-3xl md:text-5xl font-extrabold text-on-surface mb-10 text-center">Ready to build your <span className="text-gradient">AI Product</span>?</h2>
         <form
           className="space-y-6"
-          onSubmit={(e) => {
-            e.preventDefault();
-
-            const form = e.currentTarget;
-            const name = (form.elements.namedItem("name") as HTMLInputElement | null)?.value?.trim() ?? "";
-            const org = (form.elements.namedItem("org") as HTMLInputElement | null)?.value?.trim() ?? "";
-            const message = (form.elements.namedItem("message") as HTMLTextAreaElement | null)?.value?.trim() ?? "";
-
-            const CONTACT_EMAIL = "hello@novamenti.ai";
-
-            const subject = `Project inquiry - NovaMenti${org ? ` (${org})` : ""}`;
-            const body = [
-              `Name: ${name || "-"}`,
-              `Organization: ${org || "-"}`,
-              "",
-              message || "-",
-            ].join("\n");
-
-            // GitHub Pages is static: this opens the user's email client.
-            window.location.href = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-          }}
+          action="https://formspree.io/f/mykbvjop"
+          method="POST"
         >
+          <input type="hidden" name="_subject" value="New NovaMenti inquiry" />
           <div className="grid md:grid-cols-2 gap-6">
             <div className="space-y-2">
               <label className="text-sm font-medium text-on-surface-variant ml-1" htmlFor="name">Name</label>
               <input 
-                className="w-full bg-surface-container-lowest border border-outline-variant/20 rounded-xl px-4 py-3 text-white placeholder:text-slate-600 focus:outline-none focus:border-primary/50 transition-colors" 
+                className="w-full bg-surface-container-lowest border border-outline-variant/20 rounded-xl px-4 py-3 text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:border-primary/50 transition-colors" 
                 id="name" 
                 name="name"
                 placeholder="John Doe" 
                 type="text" 
+                required
               />
             </div>
             <div className="space-y-2">
               <label className="text-sm font-medium text-on-surface-variant ml-1" htmlFor="org">Organization</label>
               <input 
-                className="w-full bg-surface-container-lowest border border-outline-variant/20 rounded-xl px-4 py-3 text-white placeholder:text-slate-600 focus:outline-none focus:border-primary/50 transition-colors" 
+                className="w-full bg-surface-container-lowest border border-outline-variant/20 rounded-xl px-4 py-3 text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:border-primary/50 transition-colors" 
                 id="org" 
                 name="org"
                 placeholder="Company Inc." 
@@ -414,12 +397,24 @@ const Contact = () => (
             </div>
           </div>
           <div className="space-y-2">
+            <label className="text-sm font-medium text-on-surface-variant ml-1" htmlFor="email">Email</label>
+            <input
+              className="w-full bg-surface-container-lowest border border-outline-variant/20 rounded-xl px-4 py-3 text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:border-primary/50 transition-colors"
+              id="email"
+              name="email"
+              placeholder="you@company.com"
+              type="email"
+              required
+            />
+          </div>
+          <div className="space-y-2">
             <label className="text-sm font-medium text-on-surface-variant ml-1" htmlFor="message">What is your AI solvable problem or what is your idea?</label>
             <textarea 
-              className="w-full bg-surface-container-lowest border border-outline-variant/20 rounded-xl px-4 py-3 text-white placeholder:text-slate-600 focus:outline-none focus:border-primary/50 transition-colors min-h-[120px]" 
+              className="w-full bg-surface-container-lowest border border-outline-variant/20 rounded-xl px-4 py-3 text-on-surface placeholder:text-on-surface-variant focus:outline-none focus:border-primary/50 transition-colors min-h-[120px]" 
               id="message" 
               name="message"
               placeholder="Describe your vision..."
+              required
             ></textarea>
           </div>
           <div className="flex justify-center pt-4">
@@ -434,7 +429,7 @@ const Contact = () => (
 );
 
 const Footer = () => (
-  <footer className="bg-surface-container-lowest w-full py-12 px-8 border-t border-outline-variant/10 mt-20">
+  <footer className="bg-surface-container-lowest w-full py-8 md:py-12 px-8 border-t border-outline-variant/10 mt-10 md:mt-20">
     <div className="flex flex-col md:flex-row justify-start items-center gap-6 max-w-7xl mx-auto font-body text-xs uppercase tracking-[0.05em]">
       <div className="text-lg font-bold text-white tracking-tighter">
         NovaMenti
