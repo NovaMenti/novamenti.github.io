@@ -30,7 +30,7 @@ const Nav = () => {
           </nav>
           <a
             href="#contact"
-            className="bg-primary/65 px-6 py-2.5 rounded-lg text-on-primary-container font-bold hover:bg-primary/80 active:scale-[0.98] transition-colors duration-200"
+            className="bg-primary/65 px-6 py-2.5 rounded-lg text-on-primary-container font-bold hover:bg-primary/80 active:scale-[0.98] transition-colors duration-200 max-[440px]:hidden"
           >
             Contact us
           </a>
@@ -362,8 +362,8 @@ const Process = () => (
 );
 
 const Contact = () => (
-  <section id="contact" className="py-24 max-w-7xl mx-auto px-8">
-    <div className="glass-panel p-10 md:p-16 rounded-[2rem] relative overflow-hidden">
+  <section id="contact" className="py-24 max-w-7xl mx-auto px-8 max-[440px]:px-4">
+    <div className="glass-panel p-10 md:p-16 rounded-[2rem] relative overflow-hidden max-[440px]:p-6">
       <div className="absolute inset-0 bg-primary/5 pointer-events-none"></div>
       <div className="max-w-3xl mx-auto relative z-10">
         <h2 className="font-headline text-3xl md:text-5xl font-extrabold text-on-surface mb-10 text-center">Ready to build your <span className="text-gradient">AI Product</span>?</h2>
