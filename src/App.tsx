@@ -439,7 +439,7 @@ const Footer = () => (
         <a href="#consulting" className="text-on-surface-variant hover:text-on-surface transition-colors">Consulting</a>
       </div>
       <div className="text-on-surface-variant text-center md:text-right normal-case tracking-normal md:ml-auto">
-        © 2024 NovaMenti AI Product Lab. Built for the LLM Era.
+        © 2026 NovaMenti AI Product Lab. Built for the LLM Era.
       </div>
     </div>
   </footer>
